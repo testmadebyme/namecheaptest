@@ -35,9 +35,9 @@ describe('My profile page. Client area', function () {
 
 
         cy.get('.panel.inline-panel .item .terms').find('span')
-            .should(($p) => {
+            .should(($item) => {
                 // return an array of texts from all of the p's
-                let texts = $p.map((i, el) => 
+                let texts = $item.map((i, el) => 
                     Cypress.$(el).text())
 
                 // jquery map returns jquery object
@@ -65,12 +65,16 @@ describe('My profile page. Client area', function () {
         //cy.get('span.text.ng-binding .ng-hide="activeRow === \'password\'"');
         cy.get('span.text.ng-binding').contains('*').should('not.to.be.empty');
         
-        // cy.get('.connectors-list>li').then(function($lis){
-        //     expect($lis).to.have.length(3)
-        //     expect($lis.eq(0)).to.contain('Walk the dog')
-        //     expect($lis.eq(1)).to.contain('Feed the cat')
-        //     expect($lis.eq(2)).to.contain('Write JavaScript')
-        //   })
+        cy.get('.panel.inline-panel .item .description >span').then(function($lis){
+            //expect($lis).to.have.length(3)
+            expect($lis.eq(0)).to.contain('Tom Ford')
+            expect($lis.eq(1)).to.contain('ssls.automation+666@gmail.com')
+            expect($lis.eq(2)).to.contain('*****')
+            expect($lis.eq(3)).to.contain('+380 12312312')
+            expect($lis.eq(4)).to.contain('AddressDiagon alley 21, Misto, Uryupinsk 612120, Ukraine')
+            expect($lis.eq(5)).to.contain('oi3l')
+            expect($lis.eq(6)).to.contain('Include in mailing list')
+          })
 
     });
 
