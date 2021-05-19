@@ -71,7 +71,7 @@ describe('My profile page. Client area', function () {
             expect($lis.eq(1)).to.contain('ssls.automation+666@gmail.com')
             expect($lis.eq(2)).to.contain('*****')
             expect($lis.eq(3)).to.contain('+380 12312312')
-            expect($lis.eq(4)).to.contain('AddressDiagon alley 21, Misto, Uryupinsk 612120, Ukraine')
+            expect($lis.eq(4)).to.contain('Diagon alley 21, Misto, Uryupinsk 612120, Ukraine')
             expect($lis.eq(5)).to.contain('oi3l')
             expect($lis.eq(6)).to.contain('Include in mailing list')
           })
