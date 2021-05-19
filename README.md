@@ -1,6 +1,8 @@
 # namecheaptest
 Simple Automation Test Framework on cypress
 
+https://www.youtube.com/watch?v=lJNyf3QD1ZY
+
 QA Automation Test
 
 Task description: 
